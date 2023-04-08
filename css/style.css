@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  background-color: #1385f2;
+}
+
+.heading-primary {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: 'Dela Gothic One', cursive;
+}
