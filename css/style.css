@@ -57,6 +57,24 @@ body {
   background-color: #fff;
   border: 5px solid #020257;
   border-radius: 50%;
+  transition: 0.15s;
+}
+
+.tile:hover {
+  cursor: pointer;
+}
+
+.tile.red-piece:hover,
+.tile.yellow-piece:hover {
+  cursor: default;
+}
+
+.red-piece {
+  background-color: #f00;
+}
+
+.yellow-piece {
+  background-color: #ff0;
 }
 
 .footer {
