@@ -12,6 +12,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .header {
@@ -29,4 +31,42 @@ body {
   font-size: 4.8rem;
   font-weight: 700;
   font-family: 'Dela Gothic One', cursive;
+  letter-spacing: -1px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  height: 54rem;
+  width: 63rem;
+  background-color: blue;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 3.2rem;
+  background-color: #111;
+}
+
+.footer p {
+  color: #eee;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.75px;
+}
+
+.github-logo {
+  fill: #aaa;
+  height: 2rem;
+}
+
+.github-logo:hover {
+  fill: #eee;
 }
