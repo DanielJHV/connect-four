@@ -1,6 +1,7 @@
 'use strict';
 
 const winner = document.querySelector('.winner-text');
+const restartBtn = document.querySelector('.restart-btn');
 
 let playerRed = 'Red';
 let playerYellow = 'Yellow';
@@ -21,24 +22,28 @@ const setWinner = function (r, c) {
   }
   winner.style.color = '#1385f2';
   gameOver = true;
+  restartBtn.classList.remove('hidden');
 };
 
 const checkDraw = function () {
   let isEmpty;
-  for (let c = 0; c < columns; c++) {
-    for (let r = 0; r < rows; r++) {
-      if (board[r][c] === ' ') {
-        isEmpty = true;
-        return;
-      } else {
-        isEmpty = false;
+  if (!gameOver) {
+    for (let c = 0; c < columns; c++) {
+      for (let r = 0; r < rows; r++) {
+        if (board[r][c] === ' ') {
+          isEmpty = true;
+          return;
+        } else {
+          isEmpty = false;
+        }
       }
     }
-  }
-  if (!isEmpty) {
-    winner.textContent = `It's a draw`;
-    winner.style.color = '#1385f2';
-    gameOver = true;
+    if (!isEmpty) {
+      winner.textContent = `It's a draw`;
+      winner.style.color = '#1385f2';
+      gameOver = true;
+      restartBtn.classList.remove('hidden');
+    }
   }
 };
 
@@ -165,6 +170,7 @@ window.onload = function () {
 };
 
 const restartGame = function () {
+  restartBtn.classList.add('hidden');
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
       board[r][c] = ' ';
@@ -176,8 +182,10 @@ const restartGame = function () {
   for (let c = 0; c < columns; c++) {
     currColumns[c] = 5;
   }
-  gameOver = false;
   currPlayer = playerRed;
   winner.textContent = `Red's turn`;
   winner.style.color = '#020257';
+  gameOver = false;
 };
+
+restartBtn.addEventListener('click', restartGame);
