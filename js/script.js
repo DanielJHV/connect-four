@@ -2,17 +2,15 @@
 
 const winner = document.querySelector('.winner-text');
 const restartBtn = document.querySelector('.restart-btn');
+const rows = 6;
+const columns = 7;
 
 let playerRed = 'Red';
 let playerYellow = 'Yellow';
-
 let currPlayer = playerRed;
 let gameOver = false;
 let board;
 let currColumns;
-
-const rows = 6;
-const columns = 7;
 
 const setWinner = function (r, c) {
   if (board[r][c] == playerRed) {
@@ -142,6 +140,7 @@ const setPiece = function () {
   r -= 1;
   // Update array
   currColumns[c] = r;
+
   checkWinner();
   checkDraw();
 };
