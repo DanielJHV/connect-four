@@ -22,7 +22,7 @@ const setWinner = function (r, c) {
   winner.style.color = '#1385f2';
   gameOver = true;
 };
-const emptySpaces = [];
+
 const checkDraw = function () {
   let isEmpty;
   for (let c = 0; c < columns; c++) {
@@ -162,4 +162,22 @@ const setGame = function () {
 
 window.onload = function () {
   setGame();
+};
+
+const restartGame = function () {
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns; c++) {
+      board[r][c] = ' ';
+      const tile = document.getElementById(`${r.toString()}-${c.toString()}`);
+      tile.classList.remove('red-piece');
+      tile.classList.remove('yellow-piece');
+    }
+  }
+  for (let c = 0; c < columns; c++) {
+    currColumns[c] = 5;
+  }
+  gameOver = false;
+  currPlayer = playerRed;
+  winner.textContent = `Red's turn`;
+  winner.style.color = '#020257';
 };
