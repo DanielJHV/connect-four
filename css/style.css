@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   height: 100vh;
   font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
 }
 
 .header {
@@ -131,4 +132,156 @@ body {
 
 .github-logo:hover {
   fill: #eee;
+}
+
+@media (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+
+  .main {
+    gap: 3.4rem;
+  }
+
+  .winner-text {
+    font-size: 3.8rem;
+  }
+
+  .restart-btn {
+    margin-top: 1rem;
+    padding: 1.6rem 6.4rem;
+    font-size: 2rem;
+  }
+
+  .footer {
+    height: 3.6rem;
+  }
+
+  .footer p {
+    font-size: 2rem;
+  }
+
+  .github-logo {
+    height: 2.8rem;
+  }
+}
+
+@media (max-width: 39em) {
+  html {
+    font-size: 43%;
+  }
+
+  .header {
+    height: 12rem;
+  }
+
+  .heading-primary {
+    font-size: 6rem;
+  }
+
+  .main {
+    gap: 3.8rem;
+  }
+
+  .winner-text {
+    font-size: 4.8rem;
+  }
+
+  .restart-btn {
+    margin-top: 1rem;
+    padding: 2rem 8rem;
+    font-size: 2.4rem;
+  }
+
+  .footer {
+    height: 4.2rem;
+  }
+
+  .footer p {
+    font-size: 2.2rem;
+  }
+
+  .github-logo {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 32em) {
+  html {
+    font-size: 34%;
+  }
+
+  .header {
+    height: 14rem;
+  }
+
+  .heading-primary {
+    font-size: 7rem;
+  }
+
+  .main {
+    gap: 4.8rem;
+  }
+
+  .winner-text {
+    font-size: 5.8rem;
+  }
+
+  .restart-btn {
+    margin-top: 5rem;
+    padding: 2.6rem 10rem;
+    font-size: 2.8rem;
+  }
+
+  .footer {
+    height: 5rem;
+  }
+
+  .footer p {
+    font-size: 2.6rem;
+  }
+
+  .github-logo {
+    height: 3.4rem;
+  }
+}
+
+@media (max-width: 26em) {
+  html {
+    font-size: 26%;
+  }
+
+  .header {
+    height: 16rem;
+  }
+
+  .heading-primary {
+    font-size: 8rem;
+  }
+
+  .main {
+    gap: 5.8rem;
+  }
+
+  .winner-text {
+    font-size: 6.6rem;
+  }
+
+  .restart-btn {
+    margin-top: 5.8rem;
+    padding: 2.8rem 11rem;
+    font-size: 3.6rem;
+  }
+
+  .footer {
+    height: 6rem;
+  }
+
+  .footer p {
+    font-size: 3rem;
+  }
+
+  .github-logo {
+    height: 3.8rem;
+  }
 }
