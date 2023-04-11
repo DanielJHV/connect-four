@@ -22,6 +22,25 @@ const setWinner = function (r, c) {
   winner.style.color = '#1385f2';
   gameOver = true;
 };
+const emptySpaces = [];
+const checkDraw = function () {
+  let isEmpty;
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows; r++) {
+      if (board[r][c] === ' ') {
+        isEmpty = true;
+        return;
+      } else {
+        isEmpty = false;
+      }
+    }
+  }
+  if (!isEmpty) {
+    winner.textContent = `It's a draw`;
+    winner.style.color = '#1385f2';
+    gameOver = true;
+  }
+};
 
 const checkWinner = function () {
   // Check horizontally
@@ -119,6 +138,7 @@ const setPiece = function () {
   // Update array
   currColumns[c] = r;
   checkWinner();
+  checkDraw();
 };
 
 const setGame = function () {
